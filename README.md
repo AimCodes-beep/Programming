@@ -1,1 +1,6 @@
-# Data_Analysis
+PROGRAMMING BEST PRACTISES
+LANGUAGES
+C#
+C
+Python
+Ts
