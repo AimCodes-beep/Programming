@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1 id="heading1">Document Object Model</h1>
+    <button onclick="changeback()">Click me</button> 
+    <p id="para">Today we are learning the most important concept of Javascript Language called Document object model</p>
+    <button onclick="Disappear()">Click me</button>
+    <label for="Name">Name</label>
+    <input type="text" id="Name" name="Name">
+    <button onclick="showName()">Show Name</button>
+    <ul id="Groceries">
+
+    </ul>
+    <button onclick="count()">Click</button>
+      <script>
+        //acessing elements by id
+        var id=document.getElementById("heading1")
+        function changeback(){ //onclick event on click button the background will turn black and color will turn white
+            document.body.style.backgroundColor="black";
+          //  id.style.innerText.color="white";
+            id.style.color="white";
+        }
+        //creating a new element
+        let p=document.createElement("p")
+        p.innerHTML="Hi i am a paragraph tag" 
+        p.style.fontSize="20px";
+        document.body.appendChild(p)
+        //
+       var pp=document.getElementById("para")
+       function Disappear(){
+            pp.style.display="none"; //HIDES THE DISPLAY OF THE PARAGRAPH
+       }
+      function showName() {
+      var input = document.getElementById("Name");
+      var text = input.value;
+      var textbox = document.createElement("p");
+      textbox.innerText = "You entered: " + text;
+      document.body.appendChild(textbox);
+}
+     //dynamically addong data to a list
+    lists=document.getElementById("Groceries");
+    lists.innerHTML="<li> Mango </li> <li> Apple </li> <li>Chocolates </li> "
+   //let count=0;
+   
+     
+    </script>
+</body>
+</html>
